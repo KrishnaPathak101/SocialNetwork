@@ -24,7 +24,7 @@ console.log('CLOUDINARY_CLOUD_NAME:', CLOUDINARY_CLOUD_NAME); // Ensure the JWT_
 
 
 app.use(cors({
-    origin: ['http://localhost:5173','https://social-network-amber.vercel.app/', 'http://localhost:3000', 'http://localhost:4000', 'http://localhost:3000/api'],
+    origin: ['http://localhost:5173','https://social-network-amber.vercel.app', 'http://localhost:3000', 'http://localhost:4000', 'http://localhost:3000/api'],
     credentials: true
 }));
 app.use(cookieParser());
