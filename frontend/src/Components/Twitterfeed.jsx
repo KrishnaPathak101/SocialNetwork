@@ -26,7 +26,7 @@ const Post = ({ post, darkMode, onLike, onSave, onDelete }) => {
   const handleEdit = async () => {
     try {
       await axios.put(
-        `http://localhost:4000/posts/${post._id}`,
+        `https://socialnetwork-zqhn.onrender.com/posts/${post._id}`,
         { text: editedText },
         { withCredentials: true }
       );
@@ -44,7 +44,7 @@ const Post = ({ post, darkMode, onLike, onSave, onDelete }) => {
     setLiked(newLikedState);
     onLike(post._id, newLikedState);
 
-    const url = newLikedState ? 'http://localhost:4000/posts/like' : 'http://localhost:4000/posts/unlike';
+    const url = newLikedState ? 'https://socialnetwork-zqhn.onrender.com/posts/like' : 'https://socialnetwork-zqhn.onrender.com/posts/unlike';
 
     try {
       await axios.post(url, { postId: post._id }, { withCredentials: true });
@@ -66,7 +66,7 @@ const Post = ({ post, darkMode, onLike, onSave, onDelete }) => {
     }
 
     try {
-      const response = await axios.post('http://localhost:4000/posts/comment',
+      const response = await axios.post('https://socialnetwork-zqhn.onrender.com/posts/comment',
         { postId: post._id, text: comment },
         { withCredentials: true }
       );
@@ -81,7 +81,7 @@ const Post = ({ post, darkMode, onLike, onSave, onDelete }) => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:4000/posts/${post._id}`, { withCredentials: true });
+      await axios.delete(`https://socialnetwork-zqhn.onrender.com/posts/${post._id}`, { withCredentials: true });
       onDelete(post._id);
     } catch (error) {
       console.error('Error deleting post:', error);
@@ -258,7 +258,7 @@ const TwitterFeed = ({ userpost, userId }) => {
         return;
       }
       try {
-        const endpoint = userpost ? `http://localhost:4000/post/${fetchId}` : `http://localhost:4000/posts/${fetchId}`;
+        const endpoint = userpost ? `https://socialnetwork-zqhn.onrender.com/post/${fetchId}` : `https://socialnetwork-zqhn.onrender.com/posts/${fetchId}`;
         const response = await fetch(endpoint, {
           credentials: 'include',
         });

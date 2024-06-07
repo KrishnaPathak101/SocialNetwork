@@ -12,7 +12,7 @@ const LeftSidebar = () => {
   
     const handleLogout = async() => {
       // Add your logout logic here
-      await axios.post("http://localhost:4000/logout", {}, { withCredentials: true });
+      await axios.post("https://socialnetwork-zqhn.onrender.com/logout", {}, { withCredentials: true });
       window.location.reload();
     };
   

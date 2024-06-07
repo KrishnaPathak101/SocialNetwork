@@ -17,7 +17,7 @@ const EditProfileModal = ({ isOpen, onClose, user, updateUser }) => {
     }
 
     try {
-      const response = await axios.post('http://localhost:4000/api/profile/edit', formData, {
+      const response = await axios.post('https://socialnetwork-zqhn.onrender.com/api/profile/edit', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
         withCredentials: true
       });

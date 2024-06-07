@@ -65,7 +65,7 @@ export default function Login() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:4000/login', { email, password }, { withCredentials: true });
+      const response = await axios.post('https://socialnetwork-zqhn.onrender.com/login', { email, password }, { withCredentials: true });
       console.log(response.data);
       // handle successful login here
       if (response.data.status === 'success') {

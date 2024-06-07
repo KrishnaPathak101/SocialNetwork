@@ -43,7 +43,7 @@ const UserAvatar = ({ alt, profilePicture, userId }) => {
     e.preventDefault();
     if (isAuthorized && tempImage) {
       try {
-        const res = await fetch("http://localhost:4000/profilepicture", {
+        const res = await fetch("https://socialnetwork-zqhn.onrender.com/profilepicture", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

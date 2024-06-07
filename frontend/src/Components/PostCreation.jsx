@@ -16,7 +16,7 @@ const PostCreation = ({ darkMode }) => {
     
     try {
       const res = await axios.post(
-        'http://localhost:4000/post', 
+        'https://socialnetwork-zqhn.onrender.com/post', 
         { user: user?._id, text: postData, image: image }, 
         { withCredentials: true }
       );

@@ -12,7 +12,7 @@ const UsersToFollow = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('http://localhost:4000', {
+        const response = await axios.get('https://socialnetwork-zqhn.onrender.com', {
           withCredentials: true,
         });
 
@@ -40,7 +40,7 @@ const UsersToFollow = () => {
   const handleFollowToggle = async (userId, isFollowing) => {
     try {
       const endpoint = isFollowing ? 'unfollow' : 'follow';
-      await axios.post(`http://localhost:4000/${endpoint}`, { userIdfu: userId }, {
+      await axios.post(`https://socialnetwork-zqhn.onrender.com/${endpoint}`, { userIdfu: userId }, {
         withCredentials: true,
       });
 

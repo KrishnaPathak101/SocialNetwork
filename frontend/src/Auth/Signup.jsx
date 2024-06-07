@@ -11,7 +11,7 @@ const Signup = () => {
     e.preventDefault();
     const data = { username, fullname, email, password };
     try {
-      const res = await axios.post('http://localhost:4000/signup', data);
+      const res = await axios.post('https://socialnetwork-zqhn.onrender.com/signup', data);
       console.log(res);
       console.log(res.data);
       if (res.data.status === 'success') {

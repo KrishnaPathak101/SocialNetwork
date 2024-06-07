@@ -7,7 +7,7 @@ const FollowButton = ({ onClick, isCurrentUser, userId }) => {
   const toggleFollow = async (userId, isFollowing) => {
     try {
       const endpoint = isFollowing ? 'unfollow' : 'follow';
-      await axios.post(`http://localhost:4000/${endpoint}`, { userIdfu: userId }, {
+      await axios.post(`https://socialnetwork-zqhn.onrender.com/${endpoint}`, { userIdfu: userId }, {
         withCredentials: true,
       });
     } catch (error) {

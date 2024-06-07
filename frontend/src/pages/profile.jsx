@@ -23,7 +23,7 @@ const Profile = ({ userId }) => {
   useEffect(() => {
     const fetchUserId = async () => {
       try {
-        const response = await fetch(`http://localhost:4000/other/${userId}`, {
+        const response = await fetch(`https://socialnetwork-zqhn.onrender.com/other/${userId}`, {
           method: 'GET',
           credentials: 'include'
         });
@@ -57,7 +57,7 @@ const Profile = ({ userId }) => {
     );
   }
 
-  const endpoint = userId ? `http://localhost:4000/http://localhost:4000/following/${userId}` : `http://localhost:4000/http://localhost:4000/following/${user._id}`;
+  const endpoint = userId ? `https://socialnetwork-zqhn.onrender.com/https://socialnetwork-zqhn.onrender.com/following/${userId}` : `https://socialnetwork-zqhn.onrender.com/https://socialnetwork-zqhn.onrender.com/following/${user._id}`;
 
   const fetchFollowing = async () => {
     try {
