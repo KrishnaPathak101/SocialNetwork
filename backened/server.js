@@ -24,7 +24,7 @@ console.log('CLOUDINARY_CLOUD_NAME:', CLOUDINARY_CLOUD_NAME); // Ensure the JWT_
 
 
 app.use(cors({
-    origin: ['http://localhost:5173', 'http://localhost:3000', 'http://localhost:4000', 'http://localhost:3000/api'],
+    origin: ['http://localhost:5173','https://social-network-amber.vercel.app/', 'http://localhost:3000', 'http://localhost:4000', 'http://localhost:3000/api'],
     credentials: true
 }));
 app.use(cookieParser());
@@ -217,7 +217,9 @@ app.post('/login', async (req, res) => {
 
         if (user) {
             const token = jwt.sign({ user: user }, JWT_Secret, { expiresIn: '15d' });
-            res.cookie('token', token, { httpOnly: true });
+            res.cookie('token', token, { secure: true,
+                    httpOnly: true,
+                    sameSite: 'None' });
             return res.status(200).json({ status: 'success', message: 'Login successful' }); // Respond with success message
         } else {
             return res.status(401).json({ status: 'error', message: 'Invalid credentials' }); // Respond with error message
