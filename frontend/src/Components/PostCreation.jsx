@@ -60,15 +60,9 @@ const PostCreation = ({ darkMode }) => {
   };
 
   return (
-<<<<<<< HEAD
     <form onSubmit={handleSendingData} className={` p-4 border-b border-gray-200 `}>
       <div className="flex items-start">
       <div className="w-10 h-10  rounded-full flex-shrink-0 mr-3">
-=======
-    <form onSubmit={handleSendingData} className={`bg-black p-4 border-b border-gray-200 ${darkMode ? 'dark' : ''}`}>
-      <div className="flex items-start">
-      <div className="w-10 h-10 bg-gray-200 rounded-full flex-shrink-0 mr-3">
->>>>>>> origin/main
             <img
               src={user ? user?.profileImg : profile}
               alt="Profile"
@@ -79,11 +73,7 @@ const PostCreation = ({ darkMode }) => {
           <textarea
             value={postData}
             onChange={(e) => setPostData(e.target.value)}
-<<<<<<< HEAD
             className={`w-full h-20 resize-none border-none outline-none dark:bg-inherit  text-lg`}
-=======
-            className={`w-full h-20 resize-none border-none outline-none ${darkMode ? 'bg-gray-800 text-white' : 'bg-transparent text-white'} text-lg`}
->>>>>>> origin/main
             placeholder="What's happening?"
           />
              {image && (

@@ -1,11 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../../useContext';
 
-<<<<<<< HEAD
 const UserAvatar = ({ alt, loading, profilePicture, userId }) => {
-=======
-const UserAvatar = ({ alt, profilePicture, userId }) => {
->>>>>>> origin/main
   const [image, setImage] = useState(profilePicture); // Initialize with profilePicture
   const [tempImage, setTempImage] = useState(null); // Temporary state for previewing image
   const [showModal, setShowModal] = useState(false);
@@ -74,7 +70,6 @@ const UserAvatar = ({ alt, profilePicture, userId }) => {
   return (
     <div className="relative w-32 h-32">
       <div className="relative w-full h-full rounded-full overflow-hidden">
-<<<<<<< HEAD
         {!loading && (
           <img
             src={image || profilePicture}
@@ -90,23 +85,6 @@ const UserAvatar = ({ alt, profilePicture, userId }) => {
               
             </span>
           </div>
-=======
-        {image ? (
-          <img
-            src={image}
-            alt={alt}
-            className="w-full h-full object-cover"
-          />
-        ) : (
-          <label
-            htmlFor="avatar-upload"
-            className="w-full h-full absolute inset-0 flex items-center justify-center cursor-pointer"
-          >
-            <span className="w-32 h-32 rounded-full bg-gray-200 flex items-center justify-center">
-              No Photo
-            </span>
-          </label>
->>>>>>> origin/main
         )}
         {isAuthorized && (
           <button

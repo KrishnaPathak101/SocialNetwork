@@ -11,11 +11,7 @@ const Maincontent = () => {
 
     return (
 
-<<<<<<< HEAD
 <div className="flex-1 h-screen max-w-2xl mx-auto mt-8 ml-64 mr-64">
-=======
-<div className="flex-1 max-w-2xl mx-auto mt-8 ml-64 mr-64">
->>>>>>> origin/main
         <div className="border-b border-gray-200 dark:border-gray-800">
           <div className="flex justify-around">
             <button

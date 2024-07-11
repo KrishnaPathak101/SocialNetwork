@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import UserAvatar from './UserAvatar';
-<<<<<<< HEAD
 //props coming from Profile.jsx
 const UserCoverPhoto = ({ loading, defaultCoverPhoto, profilePicture, defaultProfilePicture, userId }) => {
-=======
-
-const UserCoverPhoto = ({ defaultCoverPhoto, profilePicture, defaultProfilePicture, userId }) => {
->>>>>>> origin/main
   const [uploadedCoverPhoto, setUploadedCoverPhoto] = useState(() => {
     const storedCoverPhoto = localStorage.getItem('coverPhoto');
     return storedCoverPhoto ? storedCoverPhoto : defaultCoverPhoto;
@@ -61,11 +56,7 @@ const UserCoverPhoto = ({ defaultCoverPhoto, profilePicture, defaultProfilePictu
       </label>
       <div className="absolute  bottom-[-70px] left-2">
         <label htmlFor="profilePictureUpload" className="cursor-pointer">
-<<<<<<< HEAD
           <UserAvatar src={uploadedProfilePicture} loading={loading} profilePicture={profilePicture} userId={userId} alt="User Avatar" className="w-16 h-16 rounded-full border-2 border-white" />
-=======
-          <UserAvatar src={uploadedProfilePicture} profilePicture={profilePicture} userId={userId} alt="User Avatar" className="w-16 h-16 rounded-full border-2 border-white" />
->>>>>>> origin/main
      
         </label>
       </div>

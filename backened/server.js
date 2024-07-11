@@ -24,11 +24,7 @@ console.log('CLOUDINARY_CLOUD_NAME:', CLOUDINARY_CLOUD_NAME); // Ensure the JWT_
 
 
 app.use(cors({
-<<<<<<< HEAD
     origin: ['http://localhost:5173','https://social-network-amber.vercel.app/', 'http://localhost:3000', 'http://localhost:4000', 'http://localhost:3000/api'],
-=======
-    origin: ['http://localhost:5173','https://socialnetwork-frontend-u1b0.onrender.com','https://social-network-amber.vercel.app', 'http://localhost:3000', 'http://localhost:4000', 'http://localhost:3000/api'],
->>>>>>> origin/main
     credentials: true
 }));
 app.use(cookieParser());
@@ -60,7 +56,6 @@ const authenticateToken = (req, res, next) => {
 };
 
 // Rate limiter middleware
-<<<<<<< HEAD
 // const generalRateLimiter = rateLimit({
 //   windowMs: 15 * 60 * 1000, // 15 minutes window
 //   max: 100, // limit each IP to 100 requests per windowMs
@@ -71,18 +66,6 @@ const authenticateToken = (req, res, next) => {
 // });
 
 // app.use(generalRateLimiter);
-=======
-const generalRateLimiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes window
-  max: 100, // limit each IP to 100 requests per windowMs
-  message: {
-      status: 'error',
-      message: 'Too many requests, please try again later'
-  }
-});
-
-app.use(generalRateLimiter);
->>>>>>> origin/main
 // Rate limiter middleware for post creation
 const postRateLimiter = rateLimit({
   windowMs: 60 * 1000, // 1 minute window
