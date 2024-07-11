@@ -19,11 +19,17 @@ const Profile = ({ userId }) => {
   const [modalUsers, setModalUsers] = useState([]);
   const [activeTab, setActiveTab] = useState('you');
   const [profileData, setProfileData] = useState(null);
+<<<<<<< HEAD
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchUserId = async () => {
       setLoading(true);
+=======
+
+  useEffect(() => {
+    const fetchUserId = async () => {
+>>>>>>> origin/main
       try {
         const response = await fetch(`https://socialnetwork-zqhn.onrender.com/other/${userId}`, {
           method: 'GET',
@@ -38,8 +44,11 @@ const Profile = ({ userId }) => {
         setProfileData(data);
       } catch (error) {
         console.error("Error fetching user:", error);
+<<<<<<< HEAD
       } finally {
         setLoading(false);
+=======
+>>>>>>> origin/main
       }
     };
 
@@ -117,12 +126,19 @@ const Profile = ({ userId }) => {
   };
 
   return (
+<<<<<<< HEAD
     <div className="dark:bg-inherit border-r border-b border-l border-gray-700 dark:border-gray-800 flex-1 max-w-2xl mx-auto ml-60 mr-64">
+=======
+    <div className="dark:bg-black border-r border-b border-l border-gray-700 dark:border-gray-800 flex-1 max-w-2xl mx-auto ml-60 mr-64">
+>>>>>>> origin/main
       <UserCoverPhoto
         coverPhoto="/cover-photo.jpg"
         profilePicture={userId ? profileData?.profileImg : user.profileImg}
         userId={userId}
+<<<<<<< HEAD
         loading={loading}
+=======
+>>>>>>> origin/main
       />
       <div className="p-8 pt-20">
         <UserProfileInfo

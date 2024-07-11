@@ -7,8 +7,12 @@ export default {
   theme: {
     extend: {},
   },
+<<<<<<< HEAD
   plugins: [
     require('daisyui'),
   ],
+=======
+  plugins: [],
+>>>>>>> origin/main
 }
 
