@@ -16,10 +16,7 @@
     "date-fns": "^3.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-<<<<<<< HEAD
     "react-loader-spinner": "^6.1.6",
-=======
->>>>>>> origin/main
     "react-router": "^6.23.1",
     "react-router-dom": "^6.23.1",
     "socialmedia": "file:.."
@@ -29,10 +26,7 @@
     "@types/react-dom": "^18.2.22",
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.19",
-<<<<<<< HEAD
     "daisyui": "^4.12.2",
-=======
->>>>>>> origin/main
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
