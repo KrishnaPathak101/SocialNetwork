@@ -119,10 +119,7 @@ export default function Login() {
             <Button className="w-full" type="submit">Sign in</Button>
           </CardFooter>
         </form>
-<<<<<<< HEAD
         <Link href={'/signup'} className="text-sm  py-10 font-medium text-black-900 "><p className=" py-5 text-black"> Don't have an account? Signup</p></Link>
-=======
->>>>>>> origin/main
       </Card>
     </div>
   );
